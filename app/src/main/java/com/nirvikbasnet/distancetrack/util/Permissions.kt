@@ -1,9 +1,9 @@
-package com.nirvikbasnet.distancetrack
+package com.nirvikbasnet.distancetrack.util
 
 import android.Manifest
 import android.content.Context
 import androidx.fragment.app.Fragment
-import com.nirvikbasnet.distancetrack.Constants.PERMISSION_LOCATION_REQUEST_CODE
+import com.nirvikbasnet.distancetrack.util.Constants.PERMISSION_LOCATION_REQUEST_CODE
 import com.vmadalin.easypermissions.EasyPermissions
 
 object Permissions {

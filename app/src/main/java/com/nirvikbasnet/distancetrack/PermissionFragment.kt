@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.nirvikbasnet.distancetrack.Permissions.hasLocationPermission
-import com.nirvikbasnet.distancetrack.Permissions.requestLocationPermission
+import com.nirvikbasnet.distancetrack.util.Permissions.hasLocationPermission
+import com.nirvikbasnet.distancetrack.util.Permissions.requestLocationPermission
 import com.nirvikbasnet.distancetrack.databinding.FragmentPermissionBinding
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
@@ -24,6 +24,10 @@ class PermissionFragment : Fragment(),EasyPermissions.PermissionCallbacks {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentPermissionBinding.inflate(inflater, container, false)
+
+        if(hasLocationPermission(requireContext())){
+            findNavController().navigate(R.id.action_permissionFragment_to_mapsFragment)
+        }
 
         binding.continueButton.setOnClickListener {
             if(hasLocationPermission(requireContext())){

@@ -3,4 +3,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="permission_description">To provide you with the best experience and relevant services, we would like to request permission to access your location. Your location helps us offer location-based features and improve our services. Rest assured, your data will be kept secure and used only for the intended purposes. Would you please grant us access to your location?</string>
+    <string name="tap_on_my_location">Tap on my location.</string>
 </resources>
